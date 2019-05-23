@@ -124,13 +124,6 @@ terraform destroy
 }
 ```
 
-* parent id search sql
-
-```code
-select '${gitlab_group.'||name||'.id}' from  namespaces limit 10;
-
-```
-
 * you can use sqler generate rest api
 
 ```code
