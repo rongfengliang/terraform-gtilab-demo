@@ -1,29 +1,13 @@
 # gitlab migrate with group && prroject
 
-> tf v0.12 
-use mustache generate  tr file (search with rest api)
+> tf v0.12
 
 ## generate tf files
-
-> use mustache tempalte && nodejs
 
 * install deps
 
 ```code
 yarn
-```
-
-* config gitlab search api address
-
-```code
-.env like this
-gitlab_api=http://localhost:8080/app.json
-```
-
-* generate tf file
-
-```code
-yarn tf
 ```
 
 * run mock api server
