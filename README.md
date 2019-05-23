@@ -1,5 +1,6 @@
 # gitlab migrate with group && prroject
 
+> tf v0.12 
 use mustache generate  tr file (search with rest api)
 
 ## generate tf files
@@ -105,7 +106,7 @@ terraform destroy
         {
           "name":"demoapp",
           "path":"demoapp",
-          "parent":"firstrong"
+          "parent":"${gitlab_group.firstrong.id}"
         },
         {
             "name":"demoapp2",
@@ -119,8 +120,15 @@ terraform destroy
         }
     ]
 
-   } 
+   }
 }
+```
+
+* parent id search sql
+
+```code
+select '${gitlab_group.'||name||'.id}' from  namespaces limit 10;
+
 ```
 
 * you can use sqler generate rest api

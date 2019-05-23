@@ -1,0 +1,29 @@
+
+provider "gitlab" {
+    base_url = "http://gitserver/api/v4/"
+    token = "xxxxxx"
+}
+
+%{ for item in data.projects ~}
+resource "gitlab_group" "${item.name}" {
+    name = "${item.name}"
+    path = "${item.path}"
+    description = "${item.description}"
+}
+%{ endfor ~}
+
+%{ for item in data.groups_parent ~}
+resource "gitlab_group" "${item.name}" {
+    name = "${item.name}"
+    path = "${item.path}"
+    description = "${item.description}"
+}
+%{ endfor ~}
+
+%{ for item in data.subgroups ~}
+resource "gitlab_group" "${item.name}" {
+    name = "${item.name}"
+    path = "${item.path}"
+    parent_id = "${item.parent}"
+}
+%{ endfor ~}

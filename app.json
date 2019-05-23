@@ -41,17 +41,17 @@
         {
           "name":"demoapp",
           "path":"demoapp",
-          "parent":"firstrong"
+          "parent":"${gitlab_group.firstrong.id}"
         },
         {
             "name":"demoapp2",
             "path":"demoapp2",
-            "parent":"secondrong"
+            "parent":"${gitlab_group.secondrong.id}"
         },
         {
             "name":"demoapp3",
             "path":"demoapp3",
-            "parent":"thirdrong"
+            "parent":"${gitlab_group.thirdrong.id}"
         }
     ]
 
