@@ -24,6 +24,6 @@ resource "gitlab_group" "${item.name}" {
 resource "gitlab_group" "${item.name}" {
     name = "${item.name}"
     path = "${item.path}"
-    parent_id = "${item.parent}"
+    parent_id = "$${gitlab_group.${item.parent}.id}"
 }
 %{ endfor ~}
