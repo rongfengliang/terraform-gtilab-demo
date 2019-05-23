@@ -106,7 +106,7 @@ terraform destroy
         {
           "name":"demoapp",
           "path":"demoapp",
-          "parent":"${gitlab_group.firstrong.id}"
+          "parent":"firstrong"
         },
         {
             "name":"demoapp2",
@@ -120,7 +120,7 @@ terraform destroy
         }
     ]
 
-   }
+   } 
 }
 ```
 
