@@ -67,39 +67,54 @@ terraform destroy
     "projects": [
         {
           "name": "firstrong",
+          "path":"firstrong",
+          "description":"firstrong",
           "group" : "firstrong"
         },
         {
            "name": "secondrong",
+           "path":"secondrong",
+           "description":"secondrong",
            "group": "secondrong"
         },
         {
             "name": "thirdrong",
+            "path":"thirdrong",
+            "description":"thirdrong",
             "group": "thirdrong"
         }
     ],
     "groups_parent":[
         {
-          "name":"firstrong"
+          "name":"firstrong",
+          "path":"firstrong",
+          "description":"firstrong"
         },
         {
-            "name":"secondrong"
+            "name":"secondrong",
+            "path":"secondrong",
+             "description":"secondrong"
         },
         {
-            "name":"thirdrong"
+            "name":"thirdrong",
+            "path":"thirdrong",
+            "description":"thirdrong"
         }
     ],
     "subgroups":[
         {
           "name":"demoapp",
+          "path":"demoapp",
           "parent":"firstrong"
         },
         {
             "name":"demoapp2",
+            "path":"demoapp2",
             "parent":"secondrong"
         },
         {
             "name":"demoapp3",
+            "path":"demoapp3",
             "parent":"thirdrong"
         }
     ]
