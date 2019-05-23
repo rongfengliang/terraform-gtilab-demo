@@ -5,10 +5,12 @@ provider "gitlab" {
 }
 
 %{ for item in data.projects ~}
-resource "gitlab_group" "${item.name}" {
+resource "gitlab_project" "${item.name}" {
     name = "${item.name}"
     path = "${item.path}"
     description = "${item.description}"
+    namespace_id = "$${gitlab_group.${item.group}.id}"
+
 }
 %{ endfor ~}
 

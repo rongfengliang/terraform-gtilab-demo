@@ -113,3 +113,9 @@ terraform destroy
 ```code
 see restapi dir
 ```
+
+## run test 
+
+> with docker-compose running
+> 
+[test-docs](./tf-result/README.md)

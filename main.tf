@@ -4,5 +4,5 @@ data "http" "example" {
 
 resource "local_file" "foo2" {
     content  = "${templatefile("backends.tmpl", "${jsondecode(data.http.example.body)}")}"
-    filename = "init2.sh"
+    filename = "tf-result/main.tf"
 }
