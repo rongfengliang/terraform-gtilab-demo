@@ -1,0 +1,11 @@
+version: "3"
+services:
+  sqler:
+    image: dalongrong/sqler:2.0
+    volumes:
+    - "./config/config-example.hcl:/app/config.example.hcl"
+    environment:
+    - "DSN=postgresql://username:password@server:port/dbname"
+    ports:
+    - "3678:3678"
+    - "8025:8025"
