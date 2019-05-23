@@ -11,7 +11,7 @@ use mustache generate  tr file (search with rest api)
 
 ```code
 yarn
-``
+```
 
 * config gitlab search api address
 
